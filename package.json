@@ -1,0 +1,26 @@
+{
+  "name": "aframe-character-controller",
+  "description": "Character controller with smooth locomotion, snap-turning, and smooth-turning in A-Frame.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo --live --verbose --port 3000 --open",
+    "deploy": "ghpages",
+    "ghpages": "ghpages"
+  },
+  "devDependencies": {
+    "budo": "^7.0.0",
+    "ghpages": "0.0.10"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-example",
+    "aframe-boilerplate",
+    "aframe-scene",
+    "webvr",
+    "vr"
+  ],
+  "dependencies": {
+    "gl-matrix": "^3.3.0"
+  }
+}

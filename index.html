@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gl-matrix@3.0.0/gl-matrix-min.js"></script>
+    <script src="components/controller.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-plane id="ground" position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#C2FCFC"></a-sky>
+      <a-entity id="player">
+        <a-entity id="head" camera wasd-controls look-controls></a-entity>        
+        <a-controller id="controllerL" hand="left" move="true"></a-controller>
+        <a-controller id="controllerR" hand="right" turn-type="snap"></a-controller>
+      </a-entity>
+      <a-box position="0 1 -4"></a-box>
+    </a-scene>
+  </body>
+</html>
