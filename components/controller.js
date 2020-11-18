@@ -19,7 +19,6 @@ AFRAME.registerComponent('smooth-locomotion', {
         this.thumbstickPressed = false;
 
         //Hook up event listeners for the relevant movement input events.
-        //Not perfect given they all take different events, but this should work for now
         controllerL.addEventListener('axismove', (event) => {
             this.moveX = event.detail.axis[2] != 0 ? event.detail.axis[2] : event.detail.axis[0];
             this.moveY = event.detail.axis[3] != 0 ? event.detail.axis[3] : event.detail.axis[1];
