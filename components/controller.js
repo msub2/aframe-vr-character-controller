@@ -20,20 +20,10 @@ AFRAME.registerComponent('smooth-locomotion', {
 
         //Hook up event listeners for the relevant movement input events.
         //Not perfect given they all take different events, but this should work for now
-        controllerL.addEventListener('thumbstickmoved', (event) => { 
-            this.moveX = event.detail.x;
-            this.moveY = event.detail.y;            
-         });
-         controllerL.addEventListener('thumbstickchanged', (event) => { 
-            if (!this.thumbstickPressed) {
-                this.moveX = event.detail.x;
-                this.moveY = event.detail.y;
-            }
-         });
-         controllerL.addEventListener('trackpadchanged', (event) => { 
-            this.moveX = event.detail.x;
-            this.moveY = event.detail.y;
-         });
+        controllerL.addEventListener('axismove', (event) => {
+            this.moveX = event.detail.axis[2] != 0 ? event.detail.axis[2] : event.detail.axis[0];
+            this.moveY = event.detail.axis[3] != 0 ? event.detail.axis[3] : event.detail.axis[1];
+        });
         controllerL.addEventListener('thumbstickdown', () => { this.thumbstickPressed = true; });
         controllerL.addEventListener('thumbstickup', () => { this.thumbstickPressed = false; });
     },
@@ -91,9 +81,9 @@ AFRAME.registerComponent('turn-controls', {
         this.posAdjustNeeded = false;
 
         //Hook up event listeners for the relevant turning input events
-        controllerR.addEventListener('thumbstickmoved', (event) => { this.rotateX = event.detail.x; });
-        controllerR.addEventListener('thumbstickchanged', (event) => { this.rotateX = event.detail.x; });
-        controllerR.addEventListener('trackpadmoved', (event) => { this.rotateX = event.detail.x; });
+        controllerL.addEventListener('axismove', (event) => {
+            this.rotateX = event.detail.axis[2] != 0 ? event.detail.axis[2] : event.detail.axis[0];
+        });
     },
     tick: function(time, timeDelta) {
         //Do nothing if this controller isn't meant to turn or the turnType is invalid
