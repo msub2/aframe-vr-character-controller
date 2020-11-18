@@ -6,7 +6,7 @@ I'll likely make more updates in the future, but this should be more than functi
 
 ## Usage
 
-To use the character controller, just copy the following HTML code into your <a-scene>:
+To use the character controller, just copy the following HTML code into your `<a-scene>`:
 
     <a-entity id="player">
         <a-entity id="head" camera wasd-controls look-controls></a-entity>        
