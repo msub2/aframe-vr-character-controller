@@ -1,8 +1,7 @@
 # A-Frame VR Character Controller
 
 This is something I developed for my own use so that I could have a ready-made character controller with smooth locomotion, teleporting, snap turning, and smooth turning.
-It wraps the hand-controls, vive-controls, oculus-touch-controls, and windows-motion-controls components into an <a-controller> primitive, and makes use of glMatrix and aframe-teleport-controls.
-I'll likely make more updates in the future, but this should be more than functional for now.
+It wraps the hand-controls, vive-controls, oculus-touch-controls, and windows-motion-controls components into an <a-controller> primitive, and makes use of aframe-blink-controls for teleportation.
 
 ## Usage
 
@@ -14,9 +13,9 @@ To use the character controller, just copy the following HTML code into your `<a
         <a-controller id="controllerR" hand="right" turn-type="snap"></a-controller>
     </a-entity>
 
-
 By default, this will give you:
-- Teleportation with trigger on both hands
+
+- Teleportation with thumbstick forward on both hands
 - Smooth locomotion on the left thumbstick/trackpad with a speed of 2
 - Snap turning on the right thumbstick/trackpad with a default snap angle of 45 degrees.
 
