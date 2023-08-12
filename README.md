@@ -39,5 +39,5 @@ There are two components: smooth-locomotion and turn-controls.
 | Attribute Name | Type   | Default Value | Info                                                                                                                                                         |   |
 |----------------|--------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
 | turnType       | string | "none"        | Method of turning. "none" disables the component. "snap" uses snap turning. "smooth" uses smooth turning. Anything else will log an error and act as "none". |   |
-| snapDegrees    | bool   | 45            | Angle in degrees to rotate player on snap                                                                                                                    |   |
-| turnSpeed      | bool   | 2             | Player smooth turning speed                                                                                                                                  |   |
+| snapDegrees    | float  | 45            | Angle in degrees to rotate player on snap                                                                                                                    |   |
+| turnSpeed      | float  | 2             | Player smooth turning speed                                                                                                                                  |   |
