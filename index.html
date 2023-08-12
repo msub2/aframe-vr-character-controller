@@ -15,7 +15,7 @@
       <a-entity id="player">
         <a-entity id="head" camera wasd-controls look-controls></a-entity>        
         <a-controller id="controllerL" hand="left" move="true"></a-controller>
-        <a-controller id="controllerR" hand="right" turn-type="snap"></a-controller>
+        <a-controller id="controllerR" hand="right" turn-type="snap" blink-controls="snapTurn: false; rotateOnTeleport: false"></a-controller>
       </a-entity>
       <a-box position="0 1 -4"></a-box>
     </a-scene>

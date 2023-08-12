@@ -129,7 +129,6 @@ AFRAME.registerPrimitive('a-controller', {
         'vive-controls': {},
         'oculus-touch-controls': {},
         'windows-motion-controls': {},
-        'blink-controls': { cameraRig: '#player', button: 'thumbstick', teleportOrigin: '#head', snapTurn: false }
     },
     mappings: {
         hand: 'hand-controls.hand',
