@@ -98,8 +98,10 @@ AFRAME.registerComponent('turn-controls', {
       if (Math.abs(this.rotateX) == 1) {
         this.lastHeadPos.setFromMatrixPosition(this.head.object3D.matrixWorld);
         this.player.object3D.rotation.y += (this.data.snapDegrees * (Math.PI / 180) * -this.rotateX);
+        this.player.object3D.updateMatrixWorld();
+        this.newHeadPos.setFromMatrixPosition(this.head.object3D.matrixWorld);
+        this.player.object3D.position.add(this.lastHeadPos.sub(this.newHeadPos));
         this.justSnapped = true;
-        this.posAdjustNeeded = true;
       }
     }
     // If player has snapped, check to see if they've moved away from either end
